@@ -16,8 +16,7 @@ export class SingupComponent implements OnInit {
       fName : new FormControl("",Validators.required),
       lName : new FormControl("",Validators.required),
       email : new FormControl("",Validators.required),
-      password : new FormControl("",Validators.required),
-      cpassword : new FormControl("",Validators.required)
+      password : new FormControl("",Validators.required)
     }); 
 
   }
