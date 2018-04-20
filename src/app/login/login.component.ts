@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 @Component({
@@ -9,9 +9,15 @@ import { ErrorStateMatcher } from '@angular/material/core';
 })
 export class LoginComponent implements OnInit {
   title = "SIGN IN To Chat Application";
+  public formValidation : FormGroup;
+
+
   constructor() { }
 
   ngOnInit() {
+    this.formValidation = new FormGroup({
+        userid : new FormControl("",Validators.required),
+        passwd : new FormControl("",Validators.required)
+    });
   }
-
 }

@@ -1,15 +1,38 @@
 <div class="container-fluid text-center">
   <h3>{{title}}</h3>
     <div class="example-container">
+      <form [formGroup]="formValidation">
+        <table align="center">
+          <tr><td>
         <mat-form-field>
-          <input matInput placeholder="Enter Userid">
-        </mat-form-field>
-        <br>
+          <input matInput placeholder="Enter Userid" formControlName="userid">
+        </mat-form-field> </td><td>
+        <div class="alert alert-danger" *ngIf="!formValidation.controls['userid'].valid && formValidation.controls['userid'].touched">
+              please enter userid
+        </div>
+      </td></tr> <tr><td>
         <mat-form-field>
-            <input matInput placeholder="Enter Password">
-        </mat-form-field>
-        <br>
+            <input matInput placeholder="Enter Password" formControlName="passwd">
+        </mat-form-field> </td> <td>
+        <div class="alert alert-danger" *ngIf="!formValidation.controls['passwd'].valid && formValidation.controls['passwd'].touched">
+            please enter Password
       </div>
-      <button mat-button color="primary">Login</button>
+    </td></tr> <tr><td>
+        <button mat-button color="primary">Login</button>
       <button mat-button color="primary">SignUp</button>
+    </td></tr>
+  </table>
+</form>
+</div>
+<!-- <form [formGroup]="formValidation" >
+    <div class="form-group">
+      <label class="center-block">UserID:
+        <input class="form-control" formControlName="userid">
+      </label>
+      <br>
+      <label class="center-block">Enter Password:
+          <input class="form-control" formControlName="passwd">
+      </label>
+    </div>
+</form> -->
 </div>
