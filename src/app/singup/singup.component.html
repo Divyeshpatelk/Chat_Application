@@ -1,70 +1,66 @@
 <div class="container-fluid text-center">
-<div class="example-container">
-    <div class="control-group col-md-4">
-    First name       
-    <mat-form-field>
-      <input matInput >
-    </mat-form-field>
-    </div>
-    <br>
-    <div class="control-group col-md-4">
-        Last name   
-    <mat-form-field>
-        <input matInput >
-    </mat-form-field>
-    </div>
-    <br>
-    <div class="control-group col-md-4">
-       Email   
-    <mat-form-field>
-      <input matInput >
-  </mat-form-field>
+  <h3>{{title}}</h3>
+  <div class="example-container">
+    <form [formGroup]="formValidation">
+      <table align="center">
+        <tr>
+          <td>
+            First name
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Last name
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Password
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Conform Password &nbsp;
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button mat-button color="primary">SignUp</button>
+            <a routerLink="/login" routerLinkActive="active" mat-button color="primary">Login</a>
+          </td>
+        </tr>
+      </table>
+    </form>
   </div>
-  <br>
-  <div class="control-group col-md-4">
-      Password
-  <mat-form-field>
-    <input matInput >
-</mat-form-field>
-</div>
-<br>
-<div class="control-group col-md-4">
-    Conform Password 
-<mat-form-field>
-  <input matInput >
-</mat-form-field>
-</div>
-<br>
-  <button mat-button color="primary">SignUp</button>
-</div>
-  <!-- <form class="form-horizontal">
-    <fieldset>
-
-      <div class="control-group col-md-4">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="" class="input-xlarge">
-      </div>
-      <br>
-      <div class="control-group col-md-4">
-        <label class="control-label" for="email">E-mail</label>
-        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-      </div>
-      <br>
-      <div class="control-group col-md-4">
-        <label class="control-label" for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-      </div>
-      <br>
-      <div class="control-group col-md-4">
-        <label class="control-label" for="password_confirm">Password (Confirm)</label>
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-      </div>
-      <br>
-      <div class="control-group col-md-4">
-        <button class="btn btn-success">Sing Up</button>
-      </div>
-
-    </fieldset>
-  </form> -->
-
 </div>

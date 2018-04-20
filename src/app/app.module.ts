@@ -9,6 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { SingupComponent } from './singup/singup.component';
+import { Routes, RouterModule} from '@angular/router'
+
+const router : Routes = [
+  {path:"login", component:LoginComponent},
+  {path:"signup", component:SingupComponent},
+  {path:'', redirectTo:'/login', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -23,7 +30,8 @@ import { SingupComponent } from './singup/singup.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(router)
   ],
   providers: [],
   bootstrap: [AppComponent]
